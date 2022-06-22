@@ -42,13 +42,13 @@ def get_message(date):
 def send_message():
     options = ChromeOptions()
     options.add_argument("--headless")
-    #Checks for latest Downloaded VGR Message
+    #Checks for latest Downloaded Message
     list_of_files = glob.glob("C:/Users/smann/Downloads/*.m4a")
     latest_file = max(list_of_files, key=os.path.getmtime)
     print(latest_file)
 
     messenger = WhatsApp()
-    messenger.find_by_username("Brandon Conformist Lotriet")
+    messenger.find_by_username("Randall Barnes")
     messenger.send_file(latest_file)
     time.sleep(10)
     docName = latest_file[25:]
